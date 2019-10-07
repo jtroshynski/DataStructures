@@ -7,7 +7,6 @@ namespace DataStructuresProject
     {
         public static void Main(string[] args)
         {
-            Queue<Node> queue = new Queue<Node>();
             Node startNode = 
                 new Node(1,
                     new Node(2,
