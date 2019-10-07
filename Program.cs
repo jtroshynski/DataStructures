@@ -79,6 +79,11 @@ namespace DataStructuresProject
             return visitedNodes;
         }
 
+        /// <summary>
+        /// recursively traverses a binary search tree and returns the nodes in order
+        /// </summary>
+        /// <param name="currentNode"></param>
+        /// <returns></returns>
         public List<Node> DFS(Node currentNode)
         {
             if (currentNode != null)
