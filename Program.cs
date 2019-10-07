@@ -24,7 +24,7 @@ namespace DataStructuresProject
              *      /   \
              *     2     3
              *    /    /  \
-             *   4    5 -- 6
+             *   4    5    6
              *    \    \  
              *     7    8 
              *         / \
@@ -33,20 +33,27 @@ namespace DataStructuresProject
 
             var sorter = new Sorter();
 
-            foreach (Node node in sorter.BFS(startNode))
+            foreach (Node node in sorter.DFS(startNode))
             {
                 Console.WriteLine(node.value);
             }
-            //1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            //BFS = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            //DFS = 1, 2, 4, 7, 3, 5, 8, 9, 10, 6
             Console.ReadKey();
         }
     }
 
     public class Sorter
     {
+        List<Node> visitedNodes = new List<Node>();
+
+        /// <summary>
+        /// traverses list of nodes and returns them in order, breadth first
+        /// </summary>
+        /// <param name="startNode"></param>
+        /// <returns></returns>
         public List<Node> BFS(Node startNode)
         {
-            List<Node> visitedNodes = new List<Node>();
 
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(startNode);
@@ -67,6 +74,21 @@ namespace DataStructuresProject
                     queue.Enqueue(currentNode.rightChild);
                 }
 
+            }
+
+            return visitedNodes;
+        }
+
+        public List<Node> DFS(Node currentNode)
+        {
+            if (currentNode != null)
+            {
+                visitedNodes.Add(currentNode);
+
+                DFS(currentNode.leftChild);
+ 
+                DFS(currentNode.rightChild);
+                
             }
 
             return visitedNodes;
