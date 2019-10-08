@@ -8,3 +8,5 @@ Breadth First Search
 Lowest Common Ancestor
 Balance a Binary Search Tree
 Find which words are anagrams
+
+hours: 4
