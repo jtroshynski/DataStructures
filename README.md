@@ -1,11 +1,12 @@
 # DataStructures
 
 # Solved Problems:
-Depth First Search
-Breadth First Search
+Depth First Search \n
+Breadth First Search \n
+Lowest Common Ancestor \n
 
 # Problems I plan on solving:
-Lowest Common Ancestor
+
 Balance a Binary Search Tree
 Find which words are anagrams
 
