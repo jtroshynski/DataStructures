@@ -36,10 +36,12 @@ namespace DataStructuresProject
 
             var sorter = new Sorter();
 
-            foreach (Node node in sorter.DFS(startNode))
-            {
-                Console.WriteLine(node.value);
-            }
+            Console.WriteLine(sorter.lowestCommonAncestor(startNode,new Node(6), new Node(7)).value);
+
+            //foreach (Node node in sorter.DFS(startNode))
+            //{
+            //    Console.WriteLine(node.value);
+            //}
             //BFS = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
             //DFS = 1, 2, 4, 7, 3, 5, 8, 9, 10, 6
             Console.ReadKey();
@@ -100,6 +102,26 @@ namespace DataStructuresProject
             }
 
             return visitedNodes;
+        }
+        
+        public Node lowestCommonAncestor(Node root, Node firstNode, Node secondNode)
+        {
+
+            if (firstNode.value > root.value && secondNode.value > root.value)
+            {
+                // If both nodes are greater than the parent
+                return lowestCommonAncestor(root.rightChild, firstNode, secondNode);
+            }
+            else if (firstNode.value < root.value && secondNode.value < root.value)
+            {
+                // If both nodes are less that the parent
+                return lowestCommonAncestor(root.leftChild, firstNode, secondNode);
+            }
+            else
+            {
+                // We have found the split point, i.e. the LCA node.
+                return root;
+            }
         }
     }
 
