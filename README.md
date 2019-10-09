@@ -9,4 +9,7 @@
 * Balance a Binary Search Tree
 * Find which words are anagrams
 
+# Data Structures covered:
+* Queue
+
 total hours: 6
