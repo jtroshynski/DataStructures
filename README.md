@@ -9,4 +9,4 @@
 * Balance a Binary Search Tree
 * Find which words are anagrams
 
-total hours: 5
+total hours: 6
