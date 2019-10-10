@@ -12,4 +12,4 @@
 # Data Structures covered:
 * Queue
 
-total hours: 6
+total hours: 7
