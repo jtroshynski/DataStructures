@@ -14,4 +14,4 @@
 * Queue
 * Min Heap
 
-total hours: 8
+total hours: 11
